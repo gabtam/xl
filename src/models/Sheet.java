@@ -7,8 +7,11 @@ import java.util.List;
 
 public class Sheet {
     List<Cell> list = new ArrayList<>();
+    Cell currentSlot;
 
+    public Sheet(){
 
+    }
 
     private static class Cell {
         private int row;

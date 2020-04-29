@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/Sheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/TextExpr.java" afterDir="false" />
+    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="started work on sheet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sheet/Cell.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sheet/Sheet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Sheet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,12 +81,19 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1588159751025</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="started work on sheet">
+      <created>1588162076324</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1588162076324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added cell, sheet class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cell, sheet class" />
+    <MESSAGE value="started work on sheet" />
+    <option name="LAST_COMMIT_MESSAGE" value="started work on sheet" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser" timestamp="1588161779071">
@@ -100,10 +104,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="690" y="347" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588160020661" />
-    <state x="409" y="234" key="CommitChangelistDialog2" timestamp="1588159750190">
+    <state x="409" y="234" key="CommitChangelistDialog2" timestamp="1588162422768">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="409" y="234" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588159750190" />
+    <state x="409" y="234" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588162422768" />
     <state x="184" y="102" key="DiffContextDialog" timestamp="1588159637102">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -124,9 +128,9 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588158800907" />
-    <state x="552" y="333" key="Vcs.Push.Dialog.v2" timestamp="1588159753809">
+    <state x="552" y="333" key="Vcs.Push.Dialog.v2" timestamp="1588162079571">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="552" y="333" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588159753809" />
+    <state x="552" y="333" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588162079571" />
   </component>
 </project>
