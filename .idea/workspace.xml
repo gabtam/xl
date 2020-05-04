@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/ExprSlot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Slot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/TextSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="added factory class, some other tidbits">
+      <change afterPath="$PROJECT_DIR$/src/model/ErrorSlot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/SlotFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expr/TestExpr.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expr/TestExpr.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Sheet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/TextExpr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/ExprSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ExprSlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Sheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/TextSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TextSlot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.XL">
     <configuration name="TestExpr" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -103,24 +102,32 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1588164109575</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="renamed cell -&gt; slot, subclasses for different contents">
+      <created>1588326820816</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1588326820816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added cell, sheet class" />
     <MESSAGE value="started work on sheet" />
     <MESSAGE value="some cellstuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="some cellstuff" />
+    <MESSAGE value="renamed cell -&gt; slot, subclasses for different contents" />
+    <MESSAGE value="added factory class, some other tidbits" />
+    <option name="LAST_COMMIT_MESSAGE" value="added factory class, some other tidbits" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="258" key="#Project_Structure" timestamp="1588325056805">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="552" y="258" key="#Project_Structure/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588325056805" />
-    <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser" timestamp="1588325596727">
+    <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser" timestamp="1588605216347">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588325596727" />
+    <state x="765" y="309" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588605216347" />
     <state x="668" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588324193761">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -129,10 +136,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="690" y="347" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588160020661" />
-    <state x="827" y="127" key="CommitChangelistDialog2" timestamp="1588164108911">
+    <state x="827" y="127" key="CommitChangelistDialog2" timestamp="1588610087334">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
-    <state x="827" y="127" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164108911" />
+    <state x="827" y="127" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588610087334" />
     <state x="184" y="102" key="DiffContextDialog" timestamp="1588159637102">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
@@ -153,9 +160,79 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state width="1877" height="221" key="GridCell.Tab.0.right/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164118155" />
+    <state x="507" y="335" key="IDE.errors.dialog" timestamp="1588606030844">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="507" y="335" key="IDE.errors.dialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588606030844" />
+    <state x="461" y="242" key="SettingsEditor" timestamp="1588608531580">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="461" y="242" key="SettingsEditor/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588608531580" />
     <state x="552" y="333" key="Vcs.Push.Dialog.v2" timestamp="1588164110951">
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="552" y="333" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588164110951" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/expr/BinaryExpr.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="simpleUML.UMLToolWindowPlugin">
+    <General>
+      <option name="birdViewUpdateDelay" value="2000" />
+      <option name="knownFile0" value="file://$PROJECT_DIR$/class.suml" />
+      <option name="defaultFileLocation" value="file://$PROJECT_DIR$/.." />
+    </General>
+    <Classdiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="defaultFieldsExpanded" value="false" />
+      <option name="defaultContructorsExpanded" value="false" />
+      <option name="defaultMethodsExpanded" value="false" />
+      <option name="showParameters" value="true" />
+      <option name="showTooltip" value="true" />
+      <option name="showReturnValues" value="true" />
+      <option name="longModifier" value="true" />
+      <option name="implementsBehaviour" value="1" />
+      <option name="extendsBehaviour" value="1" />
+      <option name="compartmentBehaviour" value="1" />
+      <option name="interfaceBackgroundColor" value="-6494306" />
+      <option name="abstractClassBackgroundColor" value="-1580132" />
+      <option name="classBackgroundColor" value="-6508057" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="quickSourceLinkColor" value="-16776961" />
+      <option name="quickDiagramLinkColor" value="-8454144" />
+      <option name="drawDecorations" value="false" />
+      <option name="hideFieldList" value="" />
+      <option name="showFieldList" value="" />
+      <option name="hideConstructorList" value="" />
+      <option name="showConstructorList" value="" />
+      <option name="hideMethodList" value="" />
+      <option name="showMethodList" value="" />
+      <option name="minimumFigureSize" value="0,0" />
+    </Classdiagram>
+    <Dependencydiagram>
+      <option name="diagramTitleFont" value="SansSerif,1,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="0" />
+    </Dependencydiagram>
+    <Packagediagram>
+      <option name="diagramTitleFont" value="SansSerif,0,12" />
+      <option name="diagramFont" value="SansSerif,0,10" />
+      <option name="packageBackgroundColor" value="-4144960" />
+      <option name="diagramBackgroundColor" value="-1" />
+      <option name="useAntialiasedConnectors" value="true" />
+      <option name="packageNameCompressionLevel" value="2" />
+    </Packagediagram>
   </component>
 </project>
