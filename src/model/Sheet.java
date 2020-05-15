@@ -1,16 +1,19 @@
 package model;
 
 import expr.Environment;
+import gui.SlotLabel;
+import org.omg.CORBA.Current;
 import util.XLException;
 
 import java.util.*;
 
 public class Sheet extends Observable implements Environment {
     Map<String, Slot> slots;
-    Slot currentSlot;
+    CurrentSlot currentSlot;
 
     public Sheet(){
         slots = new HashMap<>();
+        currentSlot = new CurrentSlot();
     }
 
     public void addSlot(String address, String data){
@@ -24,6 +27,10 @@ public class Sheet extends Observable implements Environment {
     public Slot get(String address){
         // TODO implement
         return null;
+    }
+
+    public CurrentSlot getCurrentSlot() {
+        return currentSlot;
     }
 
     // TODO we need more methods here, surely, but can't think of any now.

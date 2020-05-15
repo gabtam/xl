@@ -1,5 +1,7 @@
 package gui;
 
+import model.Sheet;
+
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.MouseEvent;
@@ -11,7 +13,7 @@ import javax.swing.SwingConstants;
 public class SlotLabels extends GridPanel {
 	public List<SlotLabel> labelList;
 
-	public SlotLabels(int rows, int cols) {
+	public SlotLabels(int rows, int cols, Sheet sheet) {
 		super(rows + 1, cols);
 		labelList = new ArrayList<SlotLabel>(rows * cols);
 		for (char ch = 'A'; ch < 'A' + cols; ch++) {
@@ -19,13 +21,10 @@ public class SlotLabels extends GridPanel {
 		}
 		for (int row = 1; row <= rows; row++) {
 			for (char ch = 'A'; ch < 'A' + cols; ch++) {
-				SlotLabel label = new SlotLabel();
+				SlotLabel label = new SlotLabel(ch+Integer.toString(row), sheet);
 				add(label);
 				labelList.add(label);
 			}
 		}
-
-		SlotLabel firstLabel = labelList.get(0);
-		firstLabel.setBackground(Color.YELLOW);
 	}
 }

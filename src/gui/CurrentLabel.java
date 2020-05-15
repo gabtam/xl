@@ -1,5 +1,7 @@
 package gui;
 
+import model.CurrentSlot;
+
 import java.awt.Color;
 import java.util.Observable;
 import java.util.Observer;
@@ -8,6 +10,7 @@ import java.util.Observer;
 public class CurrentLabel extends ColoredLabel implements Observer {
     public CurrentLabel() {
         super("A1", Color.WHITE);
+
     }
 
 	@Override
