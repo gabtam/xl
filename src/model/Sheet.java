@@ -14,18 +14,28 @@ public class Sheet extends Observable implements Environment {
     }
 
     public void addSlot(String address, String data){
-        // TODO implement
+        slots.put(address,  SlotFactory.build(data));
+        
+        setChanged();
+        notifyObservers();
     }
 
     public void removeSlot(String address){
-        // TODO implement
+        slots.remove(address);
+        
+        setChanged();
+        notifyObservers();
     }
 
     public Slot get(String address){
         // TODO implement
-        return null;
+        return slots.get(address);
     }
 
+    public boolean contains(String address) {
+    	return slots.containsKey(address);
+    }
+    
     // TODO we need more methods here, surely, but can't think of any now.
 
     @Override

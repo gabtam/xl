@@ -15,21 +15,31 @@ import model.Sheet;
 
 @SuppressWarnings("deprecation")
 public class Editor extends JTextField implements Observer, ActionListener{
-    public Editor(Sheet sheet) {
+	Sheet sheet;
+	CurrentSlot currentSlot;
+    public Editor(Sheet sheet, CurrentSlot currentSlot) {
         setBackground(Color.WHITE);
         addActionListener( this );
+        this.sheet = sheet;
+        this.currentSlot = currentSlot;
+        currentSlot.addObserver(this);
     }
 
 	@Override
 	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
-		setText(arg.toString());
+		if( o instanceof CurrentSlot && sheet.contains(o.toString())) {
+			this.setText(sheet.get(o.toString()).toString());
+			
+		}
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		 System.out.println(this.getText());
+		 
+		 sheet.addSlot(currentSlot.toString(), this.getText());
 		 this.setText("");
 	}
 }
