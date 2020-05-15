@@ -5,7 +5,7 @@ import expr.Environment;
 public class TextSlot implements Slot {
     String text;
 
-    public TextSlot(int row, char column, String text) {
+    public TextSlot(String text) {
         this.text = text;
     }
 

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="added CurrentSlot, working out dependency conundrum... :((((">
+    <list default="true" id="0ed12c38-f50e-4cfc-91fb-7593faa1d820" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/CurrentLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CurrentLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SheetPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SheetPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SlotLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SlotLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/SlotLabels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/SlotLabels.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/XL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/XL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/CurrentSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/CurrentSlot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Sheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Sheet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ExprSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ExprSlot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/SlotFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SlotFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TextSlot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TextSlot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1589541572140</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="CurrentSlot works fine, still needs notifyer method">
+      <created>1589542149314</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1589542149314</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -132,7 +134,8 @@
     <MESSAGE value="renamed cell -&gt; slot, subclasses for different contents" />
     <MESSAGE value="added factory class, some other tidbits" />
     <MESSAGE value="added CurrentSlot, working out dependency conundrum... :((((" />
-    <option name="LAST_COMMIT_MESSAGE" value="added CurrentSlot, working out dependency conundrum... :((((" />
+    <MESSAGE value="CurrentSlot works fine, still needs notifyer method" />
+    <option name="LAST_COMMIT_MESSAGE" value="CurrentSlot works fine, still needs notifyer method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="258" key="#Project_Structure" timestamp="1588325056805">
@@ -152,10 +155,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="690" y="347" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588160020661" />
-    <state x="827" y="123" key="CommitChangelistDialog2" timestamp="1589541946065">
+    <state x="850" y="166" key="CommitChangelistDialog2" timestamp="1589542148565">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="827" y="123" key="CommitChangelistDialog2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589541946065" />
+    <state x="850" y="166" key="CommitChangelistDialog2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589542148565" />
     <state x="827" y="127" key="CommitChangelistDialog2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588610182070" />
     <state x="184" y="102" key="DiffContextDialog" timestamp="1588159637102">
       <screen x="0" y="0" width="1920" height="1200" />
@@ -189,10 +192,10 @@
       <screen x="0" y="0" width="1920" height="1200" />
     </state>
     <state x="461" y="242" key="SettingsEditor/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588608531580" />
-    <state x="552" y="322" key="Vcs.Push.Dialog.v2" timestamp="1589541574537">
+    <state x="552" y="322" key="Vcs.Push.Dialog.v2" timestamp="1589542150871">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
-    <state x="552" y="322" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589541574537" />
+    <state x="552" y="322" key="Vcs.Push.Dialog.v2/0.0.1920.1160/1920.853.1920.1040@0.0.1920.1160" timestamp="1589542150871" />
     <state x="552" y="333" key="Vcs.Push.Dialog.v2/0.0.1920.1200/1920.853.1920.1080@0.0.1920.1200" timestamp="1588610184994" />
     <state x="769" y="497" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589537287453">
       <screen x="0" y="0" width="1920" height="1160" />

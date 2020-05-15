@@ -6,7 +6,7 @@ import expr.Expr;
 public class ExprSlot implements Slot {
     Expr expr;
 
-    public ExprSlot(int row, char column, Expr expr) {
+    public ExprSlot(Expr expr) {
         this.expr = expr;
     }
 
