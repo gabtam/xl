@@ -11,6 +11,13 @@ public class CurrentSlot extends Observable {
 
     public void setLabel(SlotLabel label) {
         this.label = label;
+        this.label.getText();
+        setChanged();
+        notifyObservers();
+    }
+
+    public String toString(){
+        return label.toString();
     }
 
     public void unmark(){

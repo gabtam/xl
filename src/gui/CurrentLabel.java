@@ -14,7 +14,8 @@ public class CurrentLabel extends ColoredLabel implements Observer {
 	@Override
 	public void update(Observable o, Object arg) {
         if(o instanceof CurrentSlot) {
-            CurrentSlot slot;
+            CurrentSlot slot = (CurrentSlot) o;
+            this.setText(slot.toString());
         }
 		
 	}

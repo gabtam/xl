@@ -54,4 +54,9 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 	public void mouseExited(MouseEvent e) {
 
 	}
+
+	@Override
+	public String toString() {
+		return address;
+	}
 }
