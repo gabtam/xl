@@ -1,7 +1,4 @@
-package model;
-
-import gui.SlotLabel;
-
+package gui;
 import java.awt.*;
 import java.util.Observable;
 

@@ -13,7 +13,7 @@ import javax.swing.SwingConstants;
 public class SlotLabels extends GridPanel {
 	public List<SlotLabel> labelList;
 
-	public SlotLabels(int rows, int cols, Sheet sheet) {
+	public SlotLabels(int rows, int cols, Sheet sheet, CurrentSlot current) {
 		super(rows + 1, cols);
 		labelList = new ArrayList<SlotLabel>(rows * cols);
 		for (char ch = 'A'; ch < 'A' + cols; ch++) {
@@ -21,10 +21,14 @@ public class SlotLabels extends GridPanel {
 		}
 		for (int row = 1; row <= rows; row++) {
 			for (char ch = 'A'; ch < 'A' + cols; ch++) {
-				SlotLabel label = new SlotLabel(ch+Integer.toString(row), sheet);
+				SlotLabel label = new SlotLabel(ch+Integer.toString(row), sheet, current);
 				add(label);
 				labelList.add(label);
 			}
 		}
+
+		SlotLabel first = labelList.get(0);
+		first.setBackground(Color.YELLOW);
+		current.setLabel(first);
 	}
 }

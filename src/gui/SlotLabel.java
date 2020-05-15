@@ -9,13 +9,15 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
-	String address;
+	private String address;
 	private Sheet sheet;
+	private CurrentSlot current;
 
-    public SlotLabel(String address, Sheet sheet){
+    public SlotLabel(String address, Sheet sheet, CurrentSlot current){
 		super("                    ", Color.WHITE, RIGHT);
 		this.sheet = sheet;
 		this.address = address;
+		this.current = current;
 		addMouseListener(this);
 		sheet.addObserver(this);
 	}
@@ -28,8 +30,8 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-    	sheet.getCurrentSlot().unmark();
-		sheet.getCurrentSlot().setLabel(this);
+    	current.unmark();
+		current.setLabel(this);
 		setBackground(Color.YELLOW);
 	}
 
