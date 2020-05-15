@@ -8,8 +8,8 @@ import java.util.Observer;
 
 @SuppressWarnings("deprecation")
 public class StatusPanel extends BorderPanel implements Observer {
-    protected StatusPanel(StatusLabel statusLabel) {
-        add(WEST, new CurrentLabel());
+    protected StatusPanel(StatusLabel statusLabel, CurrentSlot current) {
+        add(WEST, new CurrentLabel(current));
         add(CENTER, statusLabel);
     }
 
