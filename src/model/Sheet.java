@@ -55,7 +55,8 @@ public class Sheet extends Observable implements Environment {
         if(slots.containsKey(slotName)){
             return slots.get(slotName).getValue(this);
         } else {
-            throw new XLException("Non-existent slot.");
+            return 0;
+//            throw new XLException("Non-existent slot.");
         }
     }
 }

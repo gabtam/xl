@@ -43,6 +43,5 @@ public class Editor extends JTextField implements Observer, ActionListener{
 			sheet.addSlot(currentSlot.toString(), this.getText());
 			this.setText(revert);
 		}
-
 	}
 }
