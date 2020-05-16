@@ -16,7 +16,9 @@ import javax.swing.JPanel;
 public class XL extends JFrame implements Printable {
     private static final int ROWS = 10, COLUMNS = 8;
     private XLCounter counter;
-    private StatusLabel statusLabel = new StatusLabel();
+    Sheet sheet = new Sheet();
+    CurrentSlot currentSlot = new CurrentSlot();
+    private StatusLabel statusLabel = new StatusLabel(sheet);
     private XLList xlList;
 
     public XL(XL oldXL) {
@@ -29,8 +31,7 @@ public class XL extends JFrame implements Printable {
         this.counter = counter;
         xlList.add(this);
         counter.increment();
-        Sheet sheet = new Sheet();
-        CurrentSlot currentSlot = new CurrentSlot();
+
         JPanel statusPanel = new StatusPanel(statusLabel, currentSlot);
         JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, sheet, currentSlot);
         Editor editor = new Editor(sheet, currentSlot);

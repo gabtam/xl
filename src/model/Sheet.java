@@ -3,24 +3,29 @@ package model;
 import expr.Environment;
 import util.XLException;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Sheet extends Observable implements Environment {
-    Map<String, Slot> slots;
-    String status;
+    private Map<String, Slot> slots;
+    private String status;
 
     public Sheet(){
         slots = new HashMap<>();
     }
 
     public void addSlot(String address, String data){
-        Slot toAdd = SlotFactory.build(data);
-        if (validate(toAdd, address)){
-            slots.put(address,  SlotFactory.build(data));
-
-            setChanged();
-            notifyObservers();
+        try{
+            Slot toAdd = SlotFactory.build(data);
+            if (validate(toAdd, address)){
+                slots.put(address,  SlotFactory.build(data));
+            }
+        } catch (XLException e){
+            status = e.getMessage();
         }
+
+        setChanged();
+        notifyObservers();
     }
 
     public void removeSlot(String address){
@@ -48,9 +53,10 @@ public class Sheet extends Observable implements Environment {
         slots.put(address, new ErrorSlot());
         try {
             slot.getValue(this);
-        } catch (XLException | NullPointerException e){     // den här notationen är skitball!
+            status = "Slot updated!";
+        } catch (XLException | NullPointerException e) {     // den här notationen är skitball!
             status = e.getMessage();
-            if(previous==null) slots.remove(address);
+            if (previous == null) slots.remove(address);
             else slots.put(address, previous);
             return false;
         }
@@ -65,5 +71,9 @@ public class Sheet extends Observable implements Environment {
             return 0;
 //            throw new XLException("Non-existent slot.");
         }
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
