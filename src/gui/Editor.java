@@ -27,18 +27,16 @@ public class Editor extends JTextField implements Observer, ActionListener{
 
 	@Override
 	public void update(Observable o, Object arg) {
-		if( o instanceof CurrentSlot && sheet.contains(o.toString())) {
-			this.setText(sheet.get(o.toString()).toString());
-			
+		if(sheet.contains(currentSlot.getAddress())){
+			setText(sheet.get(currentSlot.getAddress()).toString());
+		}else{
+			setText("");
 		}
-		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		 System.out.println(this.getText());
-		 
 		 sheet.addSlot(currentSlot.toString(), this.getText());
 		 this.setText("");
 	}

@@ -16,6 +16,10 @@ public class CurrentSlot extends Observable {
         notifyObservers();
     }
 
+    public String getAddress() {
+        return label.getAddress();
+    }
+
     public String toString(){
         return label.toString();
     }

@@ -1,7 +1,6 @@
 package model;
 
 import expr.Environment;
-import gui.CurrentSlot;
 import util.XLException;
 
 import java.util.*;
@@ -30,6 +29,14 @@ public class Sheet extends Observable implements Environment {
     public Slot get(String address){
         // TODO implement
         return slots.get(address);
+    }
+
+    public String getValueAsString(String address){
+        if(slots.containsKey(address)){
+            return slots.get(address).getValueString(this);
+        } else {
+            return "";
+        }
     }
 
     public boolean contains(String address) {

@@ -22,11 +22,22 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 		sheet.addObserver(this);
 	}
 
+	public String getAddress() {
+		return address;
+	}
+
 	@Override
 	public void update(Observable o, Object arg) {
-		if(o instanceof Sheet && sheet.contains(address)) {
-			this.setText(((Sheet) o).get(address).toString());
+		if(sheet.contains(address)){
+			setText(sheet.get(address).getValueString(sheet));
+		}else{
+			setText("");
 		}
+
+
+//		if(o instanceof Sheet && sheet.contains(address)) {
+//			this.setText(((Sheet) o).get(address).toString());
+//		}
 
 	}
 
