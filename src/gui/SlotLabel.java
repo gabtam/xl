@@ -33,12 +33,6 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 		}else{
 			setText("");
 		}
-
-
-//		if(o instanceof Sheet && sheet.contains(address)) {
-//			this.setText(((Sheet) o).get(address).toString());
-//		}
-
 	}
 
 	@Override

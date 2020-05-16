@@ -13,10 +13,13 @@ public class Sheet extends Observable implements Environment {
     }
 
     public void addSlot(String address, String data){
-        slots.put(address,  SlotFactory.build(data));
-        
-        setChanged();
-        notifyObservers();
+        Slot toAdd = SlotFactory.build(data);
+        if (validate(toAdd, address)){
+            slots.put(address,  SlotFactory.build(data));
+
+            setChanged();
+            notifyObservers();
+        }
     }
 
     public void removeSlot(String address){
@@ -27,23 +30,25 @@ public class Sheet extends Observable implements Environment {
     }
 
     public Slot get(String address){
-        // TODO implement
         return slots.get(address);
-    }
-
-    public String getValueAsString(String address){
-        if(slots.containsKey(address)){
-            return slots.get(address).getValueString(this);
-        } else {
-            return "";
-        }
     }
 
     public boolean contains(String address) {
     	return slots.containsKey(address);
     }
     
-    // TODO we need more methods here, surely, but can't think of any now.
+    private boolean validate(Slot slot, String address){
+        Slot previous = get(address);
+        slots.put(address, new ErrorSlot());
+        try {
+            slot.getValue(this);
+        } catch (XLException | NullPointerException e){     // den här notationen är skitball!
+            System.out.println("Uh-oh, that's not allowed"); // TODO print some stuff? Add thing to statuspanel probably!
+            slots.put(address, previous);
+            return false;
+        }
+        return true;
+    }
 
     @Override
     public double value(String slotName) {

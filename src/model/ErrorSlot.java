@@ -6,6 +6,8 @@ import util.XLException;
 // TODO maybe rename this
 public class ErrorSlot implements Slot {
 
+    public ErrorSlot(){};
+
     @Override
     public double getValue(Environment e) {
         throw new XLException("Trying to read value of circular referencing!");

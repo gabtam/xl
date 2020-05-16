@@ -36,8 +36,13 @@ public class Editor extends JTextField implements Observer, ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		 sheet.addSlot(currentSlot.toString(), this.getText());
-		 this.setText("");
+    	String revert = getText();
+    	if(this.getText().isEmpty()){
+			sheet.removeSlot(currentSlot.getAddress());
+		}else{
+			sheet.addSlot(currentSlot.toString(), this.getText());
+			this.setText(revert);
+		}
+
 	}
 }
