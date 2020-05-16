@@ -17,7 +17,7 @@ public class ExprSlot implements Slot {
 
     @Override
     public String getValueString(Environment e) {
-        return null;
+        return String.valueOf(getValue(e));
     }
 
     @Override

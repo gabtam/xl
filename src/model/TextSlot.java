@@ -16,7 +16,7 @@ public class TextSlot implements Slot {
 
     @Override
     public String getValueString(Environment e) {
-        return text;
+        return text.substring(1);
     }
 
     @Override
