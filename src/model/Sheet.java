@@ -7,6 +7,7 @@ import java.util.*;
 
 public class Sheet extends Observable implements Environment {
     Map<String, Slot> slots;
+    String status;
 
     public Sheet(){
         slots = new HashMap<>();
@@ -34,7 +35,7 @@ public class Sheet extends Observable implements Environment {
     }
 
     public boolean contains(String address) {
-    	return slots.containsKey(address);
+        return slots.containsKey(address);
     }
     public void clear() {
     	slots.clear();
@@ -48,8 +49,9 @@ public class Sheet extends Observable implements Environment {
         try {
             slot.getValue(this);
         } catch (XLException | NullPointerException e){     // den här notationen är skitball!
-            System.out.println("Uh-oh, that's not allowed"); // TODO print some stuff? Add thing to statuspanel probably!
-            slots.put(address, previous);
+            status = e.getMessage();
+            if(previous==null) slots.remove(address);
+            else slots.put(address, previous);
             return false;
         }
         return true;
