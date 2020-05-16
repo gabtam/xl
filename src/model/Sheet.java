@@ -36,6 +36,11 @@ public class Sheet extends Observable implements Environment {
     public boolean contains(String address) {
     	return slots.containsKey(address);
     }
+    public void clear() {
+    	slots.clear();
+    	setChanged();
+    	notifyObservers();
+    }
     
     private boolean validate(Slot slot, String address){
         Slot previous = get(address);
